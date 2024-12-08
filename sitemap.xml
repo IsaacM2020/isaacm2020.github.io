@@ -1,40 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>/books/</loc>
+    <loc>//localhost:1313/books/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>/</loc>
+  </url>
+  <url>
+    <loc>//localhost:1313/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>/books/firstpost/</loc>
+  </url>
+  <url>
+    <loc>//localhost:1313/books/firstpost/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>/books/secondpost/</loc>
+  </url>
+  <url>
+    <loc>//localhost:1313/books/secondpost/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/authors/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/categories/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/series/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/tags/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
