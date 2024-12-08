@@ -7,7 +7,7 @@ HUGO_SITE_PATH = r'C:\Users\isaac\isaacblogs'  # Replace with your Hugo site dir
 OBSIDIAN_VAULT_PATH = r'C:\Users\isaac\OneDrive\Documents\obby1\posts'  # Replace with your Obsidian vault directory
 OBSIDIAN_IMAGE_PATH = r'C:\Users\isaac\OneDrive\Documents\obby1\Attachments'  # Replace with your Obsidian image directory
 STATIC_IMAGE_PATH = os.path.join(HUGO_SITE_PATH, 'static', 'images')  # Hugo static images directory
-CONTENT_PATH = os.path.join(HUGO_SITE_PATH, 'content')  # Hugo content directory
+CONTENT_PATH = os.path.join(HUGO_SITE_PATH, 'content', 'books')  # Hugo content directory
 
 def run_command(command):
     """Run a system command and print output."""

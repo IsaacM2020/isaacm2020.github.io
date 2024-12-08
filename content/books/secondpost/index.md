@@ -9,3 +9,4 @@ series_order: 6
 
 
 hello guys, what is up with ht ebideo
+thumbnail: /images/featured.jpg
