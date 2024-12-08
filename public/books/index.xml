@@ -2,27 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Books on Project 37: By Isaac</title>
-    <link>/books/</link>
+    <link>//localhost:1313/books/</link>
     <description>Recent content in Books on Project 37: By Isaac</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>isaacmirandaofficial@gmail.com (Isaac Miranda)</managingEditor>
     <webMaster>isaacmirandaofficial@gmail.com (Isaac Miranda)</webMaster>
-    <lastBuildDate>Sun, 08 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/books/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 Isaac Miranda</copyright>
+    <lastBuildDate>Sun, 08 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/books/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Setting Up The Blog</title>
-      <link>/books/firstpost/</link>
-      <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate><author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
-      <guid>/books/firstpost/</guid>
+      <link>//localhost:1313/books/firstpost/</link>
+      <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
+      <author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
+      <guid>//localhost:1313/books/firstpost/</guid>
       <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/books/firstpost/featured.jpg" />
     </item>
+    
     <item>
       <title>The Unit Test</title>
-      <link>/books/secondpost/</link>
-      <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate><author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
-      <guid>/books/secondpost/</guid>
+      <link>//localhost:1313/books/secondpost/</link>
+      <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
+      <author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
+      <guid>//localhost:1313/books/secondpost/</guid>
       <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/books/secondpost/featured.jpg" />
     </item>
+    
   </channel>
 </rss>
