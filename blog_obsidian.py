@@ -55,7 +55,7 @@ def process_files():
         messagebox.showerror("Error", "Please enter a folder name.")
         return
     
-    target_folder = os.path.join(config["site_repository_path"], "content", "posts", target_folder_name)
+    target_folder = os.path.join(config["site_repository_path"], "content", "books", target_folder_name)
 
     if os.path.exists(target_folder):
         shutil.rmtree(target_folder)  # Remove the existing folder
