@@ -2,12 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Project 37: By Isaac</title>
-    <link>/tags/</link>
+    <link>//localhost:51443/tags/</link>
     <description>Recent content in Tags on Project 37: By Isaac</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>isaacmirandaofficial@gmail.com (Isaac Miranda)</managingEditor>
     <webMaster>isaacmirandaofficial@gmail.com (Isaac Miranda)</webMaster>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 Isaac Miranda</copyright>
+    <lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:51443/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blog</title>
+      <link>//localhost:51443/tags/blog/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
+      <guid>//localhost:51443/tags/blog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Firstpost</title>
+      <link>//localhost:51443/tags/firstpost/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
+      <guid>//localhost:51443/tags/firstpost/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Project37</title>
+      <link>//localhost:51443/tags/project37/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
+      <guid>//localhost:51443/tags/project37/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>
