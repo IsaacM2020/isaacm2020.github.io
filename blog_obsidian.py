@@ -19,11 +19,13 @@ def load_config():
         with open(config_path, "r") as file:
             config = json.load(file)
     else:
-        messagebox.showerror("Error", "Configuration file not found. Please run the setup.")
+        config = {
+            "documents_path": "",
+            "obsidian_vault_path": "",
+            "site_repository_path": ""
+        }
 
-def save_config(new_config):
-    global config
-    config = new_config
+def save_config():
     with open(config_path, "w") as file:
         json.dump(config, file, indent=4)
 
@@ -34,28 +36,29 @@ def setup_configuration():
     site_repo = filedialog.askdirectory(title="Select Site Repository Path")
 
     if user_documents and obsidian_vault and site_repo:
-        new_config = {
-            "documents_path": user_documents,
-            "obsidian_vault_path": obsidian_vault,
-            "site_repository_path": site_repo
-        }
-        save_config(new_config)
+        config["documents_path"] = user_documents
+        config["obsidian_vault_path"] = obsidian_vault
+        config["site_repository_path"] = site_repo
+        save_config()
         messagebox.showinfo("Setup", "Configuration saved successfully!")
     else:
         messagebox.showerror("Error", "Setup incomplete. Please provide all paths.")
 
-# Process files function (adapted to use config)
+def ensure_configured():
+    if not config["documents_path"] or not config["obsidian_vault_path"] or not config["site_repository_path"]:
+        messagebox.showinfo("Configuration Required", "Please set up the paths first.")
+        setup_configuration()
+
 def process_files():
     global featured_image_path, dropped_files
-    if not config:
-        load_config()
+    ensure_configured()
     
     target_folder_name = target_folder_entry.get()
     if not target_folder_name.strip():
         messagebox.showerror("Error", "Please enter a folder name.")
         return
-    
-    target_folder = os.path.join(config["site_repository_path"], "content", "books", target_folder_name)
+
+    target_folder = os.path.join(config["site_repository_path"], "content", "posts", target_folder_name)
 
     if os.path.exists(target_folder):
         shutil.rmtree(target_folder)  # Remove the existing folder
@@ -75,7 +78,7 @@ def process_files():
             images = re.findall(r'\[\[([^]]*\.png)\]\]', content)
             for image in images:
                 encoded_image = image.replace(' ', '%20')
-                markdown_image = f"!![Image Description]({encoded_image})"
+                markdown_image = f"![Image Description]({encoded_image})"
                 content = content.replace(f"[[{image}]]", markdown_image)
 
                 if not first_image_handled:
@@ -109,16 +112,14 @@ def process_files():
 
 def select_featured_image():
     global featured_image_path
-    if not config:
-        load_config()
-    initial_dir = config["obsidian_vault_path"]
+    ensure_configured()
     filetypes = [
         ("PNG files", "*.png"),
         ("JPEG files", "*.jpg *.jpeg"),
         ("All image files", "*.png *.jpg *.jpeg")
     ]
     featured_image_path = filedialog.askopenfilename(
-        initialdir=initial_dir,
+        initialdir=config["obsidian_vault_path"],
         title="Select Featured Image",
         filetypes=filetypes
     )
@@ -134,12 +135,10 @@ def on_drop(event):
 
 def browse_files():
     global dropped_files
-    if not config:
-        load_config()
-    initial_dir = config["obsidian_vault_path"]
+    ensure_configured()
     filetypes = [("All files", "*.*")]
     selected_files = filedialog.askopenfilenames(
-        initialdir=initial_dir,
+        initialdir=config["obsidian_vault_path"],
         title="Select Markdown or Image Files",
         filetypes=filetypes
     )
@@ -147,8 +146,7 @@ def browse_files():
     dropped_files_label.config(text="\n".join(dropped_files))
 
 def push_to_github():
-    if not config:
-        load_config()
+    ensure_configured()
     try:
         site_path = config["site_repository_path"]
         os.chdir(site_path)
@@ -167,57 +165,39 @@ def push_to_github():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-def setup_button_action():
-    setup_configuration()
-
 # GUI Setup
+load_config()
 root = TkinterDnD.Tk()
 root.title("Markdown and Image Processor with Post Manager")
 root.geometry("800x800")
 
-# Add a setup button to the GUI
-setup_button = Button(root, text="Setup Paths", command=setup_button_action)
+setup_button = Button(root, text="Setup Paths", command=setup_configuration)
 setup_button.pack(pady=10)
 
-# Instructions
 Label(root, text="Drag and drop Markdown and image files below:").pack(pady=10)
 
-# Drop target area
 dropped_files_label = Label(root, text="Drop files here", bg="lightgray", relief="sunken", width=50, height=10)
 dropped_files_label.pack(pady=10)
 dropped_files_label.drop_target_register(DND_FILES)
 dropped_files_label.dnd_bind("<<Drop>>", on_drop)
 
-# Browse files button
 browse_button = Button(root, text="Browse Files", command=browse_files)
 browse_button.pack(pady=5)
 
-# Target folder name input
 Label(root, text="Enter new post folder:").pack(pady=10)
 target_folder_entry = Entry(root, width=40)
 target_folder_entry.pack(pady=5)
 
-# Process button
 process_button = Button(root, text="Process Files", command=process_files)
 process_button.pack(pady=20)
 
-# Featured Image section
 Label(root, text="Featured Image:").pack(pady=5)
 featured_image_button = Button(root, text="Select Featured Image", command=select_featured_image)
 featured_image_button.pack(pady=5)
 featured_image_label = Label(root, text="No image selected")
 featured_image_label.pack(pady=5)
 
-# GitHub Push button
 github_push_button = Button(root, text="Push to GitHub", command=push_to_github)
 github_push_button.pack(pady=5)
-
-# Post management section
-Label(root, text="Manage Posts:").pack(pady=10)
-post_listbox = Listbox(root, width=50, height=10)
-post_listbox.pack(pady=10)
-scrollbar = Scrollbar(root, orient="vertical", command=post_listbox.yview)
-scrollbar.pack(side="right", fill="y")
-post_listbox.config(yscrollcommand=scrollbar.set)
 
 root.mainloop()
