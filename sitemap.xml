@@ -7,12 +7,12 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>/books/</loc>
+    <loc>/tags/firstpost/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>/tags/firstpost/</loc>
+    <loc>/posts/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -27,18 +27,13 @@
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>/books/firstpost/</loc>
+    <loc>/posts/first-post/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>/tags/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/books/secondpost/</loc>
-    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url><url>
