@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on Project 37: By Isaac</title>
-    <link>//localhost:51443/authors/</link>
+    <link>//localhost:1313/authors/</link>
     <description>Recent content in Authors on Project 37: By Isaac</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>isaacmirandaofficial@gmail.com (Isaac Miranda)</managingEditor>
     <webMaster>isaacmirandaofficial@gmail.com (Isaac Miranda)</webMaster>
     <copyright>© 2024 Isaac Miranda</copyright>
-    <atom:link href="//localhost:51443/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
