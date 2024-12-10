@@ -154,7 +154,8 @@ def push_to_github():
             ["git", "add", "."],
             ["git", "commit", "-m", "Site update"],
             ["git", "pull"],
-            ["git", "push", "-u", "origin", "master"]
+            ["git", "push", "-u", "origin", "master"],
+            ["hugo", "-t", "server", "blowfish"]
         ]
         for cmd in commands:
             result = subprocess.run(cmd, capture_output=True, text=True, check=True)
