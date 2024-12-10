@@ -8,16 +8,15 @@ tags:
   - project37
 ---
 
+Hello Guys! Welcome to the first post of the blog! This post is about how I made this website. Have fun.
 
 A few years ago, I watched a video by Ali Abdaal regarding setting up a newsletter. This piqued my interest in the idea of blogging. I started blogging on substack for a few months but I stopped as I lost interest. However, around two weeks ago. Network Chuck, a tech education youtuber, posted a video on how you can create a blog, and host it on a custom domain. This caught my attention, as making a website could be a worthy challenge and would serve me well in the future. The tutorial by Network Chuck was a great start to the website, but did not provide an in-depth way of customizing the website. The purpose of this article is to help individuals not make the same mistakes that I made while trying to make this website.
-
 
 I decided to start this project of making a blog, for the following reasons:
 1. Having a blog is cool
 2. It is fun to post your thoughts online
 3. I wanted to use my (free) custom domain name
 4. I wanted to learn how to build and host a website for free and from scratch
-
 
 Step 1: Get all of your prerequisites ready
 
@@ -66,9 +65,9 @@ git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blo
 Step 4: Set up the configuration files for blowfish
 
 - Open file explorer and open the file directory where your website code resides. 
-!!![Image Description](Pasted%20image%2020241210103039.png)
+!![Image Description](Pasted%20image%2020241210103039.png)
 - Open the 'themes' folder and open the theme called 'blowfish', in there copy the 'config' folder and paste it in the root directory of the website. 
- !!![Image Description](Pasted%20image%2020241210103927.png)
+ !![Image Description](Pasted%20image%2020241210103927.png)
 
 
 
@@ -94,4 +93,4 @@ Step 4: Set up the configuration files for blowfish
 - Invite readers to comment with their experiences if they’ve set up their own blogs or have questions.
 - Mention subscribing to your newsletter or following for future posts.
 
-**!!![Image Description](Pasted%20image%2020241210082422.png)**
+**!![Image Description](Pasted%20image%2020241210082422.png)**

@@ -21,8 +21,8 @@ disableImageOptimization = false
 disableTextInHeader = false
 # backgroundImageWidth = 1200
 
-defaultBackgroundImage = "background10.png" # used as default for background images 
-defaultFeaturedImage = "nature7.png" # used as default for featured images in all articles
+defaultBackgroundImage = "nature7.png" # used as default for background images 
+# defaultFeaturedImage = "nature7.png" # used as default for featured images in all articles
 
 # highlightCurrentMenuArea = true
 # smartTOC = true
