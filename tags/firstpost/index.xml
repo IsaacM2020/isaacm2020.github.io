@@ -23,6 +23,16 @@
     
     <item>
       <title>Setting Up The Blog</title>
+      <link>//localhost:1313/posts/try_touch_mala_agai/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
+      <guid>//localhost:1313/posts/try_touch_mala_agai/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/try_touch_mala_agai/featured.png" />
+    </item>
+    
+    <item>
+      <title>Setting Up The Blog</title>
       <link>//localhost:1313/posts/tryagain/</link>
       <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
       <author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
