@@ -354,3 +354,118 @@ delete_button.pack(pady=5)
 
 # Start the GUI event loop
 root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
+import RPi.GPIO as GPIO
+import time
+import os
+import subprocess
+from threading import Timer
+
+# GPIO Mode (BOARD / BCM)
+GPIO.setmode(GPIO.BCM)
+ 
+# Set GPIO Pins
+GPIO_TRIGGER = 23
+GPIO_ECHO = 24
+ 
+# Set GPIO direction (IN / OUT)
+GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
+GPIO.setup(GPIO_ECHO, GPIO.IN)
+
+# Global variable to track if music is playing
+is_playing = False
+player_process = None
+
+def distance():
+    # Trigger ultrasonic pulse
+    GPIO.output(GPIO_TRIGGER, True)
+    time.sleep(0.00001)
+    GPIO.output(GPIO_TRIGGER, False)
+ 
+    StartTime = time.time()
+    StopTime = time.time()
+ 
+    # Save StartTime
+    while GPIO.input(GPIO_ECHO) == 0:
+        StartTime = time.time()
+ 
+    # Save time of arrival
+    while GPIO.input(GPIO_ECHO) == 1:
+        StopTime = time.time()
+ 
+    # Time difference between start and arrival
+    TimeElapsed = StopTime - StartTime
+    # Multiply with the sonic speed (34300 cm/s)
+    # and divide by 2, because there and back
+    distance = (TimeElapsed * 34300) / 2
+ 
+    return distance
+
+def play_music():
+    global is_playing, player_process
+    if not is_playing:
+        print("Playing Christmas music!")
+        is_playing = True
+        # Replace 'christmas.mp3' with your audio file name
+        player_process = subprocess.Popen(['mpg123', '🎅 Free Santa Sound Effect ｜ ＂Ho Ho Ho Merry Christmas＂ 🎅 [jPhkBYDcsRA].mp3'])
+        
+def stop_music():
+    global is_playing, player_process
+    if is_playing and player_process:
+        player_process.terminate()
+        is_playing = False
+        print("Stopped music")
+
+try:
+    while True:
+        dist = distance()
+        print(f"Distance = {dist:.1f} cm")
+        
+        # If someone is closer than 50cm and music isn't playing
+        if dist < 50 and not is_playing:
+            play_music()
+        # If person moves away and music is playing
+        elif dist >= 50 and is_playing:
+            stop_music()
+            
+        # Wait 1 second between measurements
+        time.sleep(1)
+ 
+except KeyboardInterrupt:
+    print("Measurement stopped by User")
+    stop_music()
+    GPIO.cleanup()
+
+
+    """
+
+
+
+
