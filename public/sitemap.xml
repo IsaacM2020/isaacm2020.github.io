@@ -1,51 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>/tags/blog/</loc>
+    <loc>//localhost:1313/posts/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>/tags/firstpost/</loc>
+  </url>
+  <url>
+    <loc>//localhost:1313/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>/posts/</loc>
+  </url>
+  <url>
+    <loc>//localhost:1313/posts/first-post/</loc>
     <lastmod>2024-12-09T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/tags/project37/</loc>
-    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/posts/first-post/</loc>
-    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/authors/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/categories/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>/series/</loc>
+  </url>
+  <url>
+    <loc>//localhost:1313/posts/testing/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
