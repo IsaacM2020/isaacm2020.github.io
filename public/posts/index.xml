@@ -17,12 +17,5 @@
       <guid>/posts/first-post/</guid>
       <description></description>
     </item>
-    <item>
-      <title></title>
-      <link>/posts/secondpost/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>isaacmirandaofficial@gmail.com (Isaac Miranda)</author>
-      <guid>/posts/secondpost/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>
